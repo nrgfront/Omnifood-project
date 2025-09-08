@@ -621,8 +621,50 @@
     <button id="btn-theme" class="btn">
       <ion-icon name="sunny"></ion-icon>
     </button>
+      <!-- Auth0 Library -->
+  <script src="https://cdn.auth0.com/js/auth0-spa-js/1.22/auth0-spa-js.production.js"></script>
+  <script>
+    let auth0 = null;
+
+    // شروع Auth0
+    const initAuth0 = async () => {
+      auth0 = await createAuth0Client({
+        domain: "YOUR_DOMAIN",        // مثلا: dev-abc1234xyz.eu.auth0.com
+        client_id: "YOUR_CLIENT_ID"   // مثلا: A1b2C3d4E5F6g7H8i9J0klmnop
+      });
+    };
+
+    // وقتی صفحه لود شد
+    window.onload = async () => {
+      await initAuth0();
+
+      // چک کن آیا Auth0 کاربر رو بعد از ثبت‌نام برگردونده یا نه
+      if (window.location.search.includes("code=") && window.location.search.includes("state=")) {
+        await auth0.handleRedirectCallback();
+        window.history.replaceState({}, document.title, "/"); // URL رو تمیز می‌کنه
+      }
+
+      // بررسی ورود کاربر
+      const isAuthenticated = await auth0.isAuthenticated();
+      if (isAuthenticated) {
+        const user = await auth0.getUser();
+        document.body.innerHTML += `<p>🎉 خوش اومدی ${user.email}</p>`;
+      }
+    };
+
+    // دکمه Sign Up
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("signup-btn").addEventListener("click", async () => {
+        await auth0.loginWithRedirect({
+          screen_hint: "signup",
+          redirect_uri: "https://nrgfront.github.io/Omnifood-project/"
+        });
+      });
+    });
+  </script>
   </body>
 </html>
+
 
 
 
