@@ -10,9 +10,13 @@
   align-items: center;
   height: 6.4rem;
   position: relative;
+  gap: 2.4rem; /* feat: implement dark/light mode toggle button */
 }
 .logo-omnifood {
   height: 2rem;
+}
+.main-nav {
+  margin-left: auto; /* feat: implement dark/light mode toggle button */
 }
 .main-nav-list {
   display: flex;
@@ -35,7 +39,8 @@
   padding: 1.2rem 2.4rem;
   border-radius: 0.8rem;
   transition: background-color 0.5s;
-  color: #fff;
+  color: #fff!important; /* feat: implement dark/light mode toggle button */
+}
 }
 .btn-active:hover {
   background-color: #cf711f;
@@ -622,4 +627,91 @@
   font-size: 2.4rem;
   cursor: pointer;
 }
+/*******************************/
+/* Dark/Light Mode */
+/*******************************/
+
+/* btn-dark-mode */
+#btn-theme {
+  background: #fdf2e9;
+  border: none;
+  border-radius: 8px;
+  padding: 1.2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+#btn-theme:hover {
+  transform: scale(1.1);
+}
+
+.dark-mode #btn-theme {
+  background-color: #333;
+  color: #f1f1f1;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+/* logo & featured-dark-mode */
+.dark-mode .logo-omnifood,
+.dark-mode .logo {
+  filter: invert(1) grayscale(1);
+}
+
+.dark-mode {
+  background-color: #1f1f1f;
+  color: #f1f1f1;
+}
+
+.dark-mode a {
+  color: #ffdd57;
+}
+/* background-sections-dark-mod */
+.dark-mode .header,
+.dark-mode .section-hero,
+.dark-mode .section-testimonials,
+.dark-mode footer {
+  background-color: #1a1a1a;
+}
+
+.dark-mode .delivered-img img {
+  border: 5px solid #1a1a1a;
+}
+
+/* other-btn-dark-mode */
+.dark-mode .btn--fill,
+.dark-mode .btn--outline {
+  color: #f1f1f1;
+}
+.dark-mode .btn--outline {
+  background-color: #333;
+}
+.dark-mode .btn--outline:hover {
+  background-color: #1a1a1a;
+  box-shadow: inset 0 0 0 3px #333;
+}
+
+/* meals-shadow-dark-mode */
+.dark-mode .meal {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+/* pricing-dark-mode */
+.dark-mode .plan-complete {
+  background-color: #1a1a1a;
+}
+.dark-mode .plan-starter {
+  box-shadow: inset 0 0 0 2px #1a1a1a;
+}
+.dark-mode .feature-title,
+.dark-mode .footer-heading {
+  color: #f1f1f1;
+}
+.dark-mode .footer-link {
+  color: #6f6f6f;
+}
+.dark-mode .footer-link:hover {
+  color: #cf711f;
+}
+
+
 
