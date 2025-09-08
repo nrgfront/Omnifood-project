@@ -121,6 +121,23 @@ form.addEventListener("submit", function (e) {
     alert("✅ سفارش شما ثبت شد!");
   }
 });
+///////////////////////////////////////////////////////////
+// Dark/Light Mode
+
+const btnTheme = document.getElementById("btn-theme");
+
+btnTheme.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+
+  // تغییر آیکون
+  const icon = btnTheme.querySelector("ion-icon");
+  if (document.body.classList.contains("dark-mode")) {
+    icon.setAttribute("name", "moon"); // 🌙
+  } else {
+    icon.setAttribute("name", "sunny"); // 🌞
+  }
+});
+
 
 
 
