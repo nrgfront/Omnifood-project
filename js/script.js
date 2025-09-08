@@ -108,4 +108,19 @@ btnTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
+///////////////////////////////////////////////////////////
+// Form Validation
+
+const form = document.querySelector("form");
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const email = document.querySelector("#cta-email").value;
+  if (!email.includes("@")) {
+    alert("❌ لطفاً ایمیل معتبر وارد کنید");
+  } else {
+    alert("✅ سفارش شما ثبت شد!");
+  }
+});
+
+
 
