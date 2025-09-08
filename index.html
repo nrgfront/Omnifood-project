@@ -654,7 +654,7 @@
 
     // دکمه Sign Up
     document.addEventListener("DOMContentLoaded", () => {
-      document.getElementById("signup-btn").addEventListener("click", async () => {
+      document.getElementById("btn-cta").addEventListener("click", async () => {
         await auth0.loginWithRedirect({
           screen_hint: "signup",
           redirect_uri: "https://nrgfront.github.io/Omnifood-project/"
@@ -664,6 +664,7 @@
   </script>
   </body>
 </html>
+
 
 
 
