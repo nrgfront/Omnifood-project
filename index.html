@@ -73,7 +73,9 @@
               eat healthy again. Tailored to your personal tastes and
               nutritional needs.
             </p>
-            <a href="" class="btn btn--fill margin-right-middle margin-buttom-s btn-sign-up"
+        
+
+            <a href="" class="btn btn--fill margin-right-middle margin-buttom-s " id="btn-signup" href="javascript:void(0)"
               >Start eating well</a
             >
             <a href="" class="btn btn--outline margin-right-middle"
@@ -101,6 +103,7 @@
             </picture>
           </div>
         </div>
+        <p id="user-info"></p>
       </section>
             <!-- add fade-in scroll animation for sections -->
       <section class="section-featured-in" data-aos="fade-up">
@@ -622,50 +625,54 @@
       <ion-icon name="arrow-round-up"></ion-icon>
     </button>
 
-   
-      <!-- Auth0 Library -->
-  <script src="https://cdn.auth0.com/js/auth0-spa-js/1.22/auth0-spa-js.production.js"></script>
-  <script>
-    let auth0 = null;
+<!--     auth0 library -->
+   <script src="https://cdn.auth0.com/js/auth0-spa-js/2.5/auth0-spa-js.production.js"></script>
+<script>
+  let auth0Client;
 
-    // شروع Auth0
-    const initAuth0 = async () => {
-      auth0 = await createAuth0Client({
-        domain: "dev-27uradi1nhb46goz.us.auth0.com",   
-        client_id: "RdVkDBf94wKPW7CM3Epb8t9FjD0bLx4G"  
-      });
-    };
+  async function initAuth0() {
+    auth0Client = await createAuth0Client({
+      domain: "dev-27uradi1nhb46goz.us.auth0.com",        // ← اینو از داشبورد Auth0 بگیر
+      client_id: "RdVkDBf94wKPW7CM3Epb8t9FjD0bLx4G",  // ← اینو هم از داشبورد Auth0 بگیر
+    });
 
-    // وقتی صفحه لود شد
-    window.onload = async () => {
-      await initAuth0();
+    // وقتی کاربر از Auth0 برگشت، این کد ریدایرکت رو هندل می‌کنه
+    if (window.location.search.includes("code=") &&
+        window.location.search.includes("state=")) {
+      await auth0Client.handleRedirectCallback();
+      window.history.replaceState({}, document.title, "/"); 
+    }
 
-      // چک کن آیا Auth0 کاربر رو بعد از ثبت‌نام برگردونده یا نه
-      if (window.location.search.includes("code=") && window.location.search.includes("state=")) {
-        await auth0.handleRedirectCallback();
-        window.history.replaceState({}, document.title, "/"); // URL رو تمیز می‌کنه
-      }
+    const isAuthenticated = await auth0Client.isAuthenticated();
 
-      // بررسی ورود کاربر
-      const isAuthenticated = await auth0.isAuthenticated();
-      if (isAuthenticated) {
-        const user = await auth0.getUser();
-        document.body.innerHTML += `<p>🎉 خوش اومدی ${user.email}</p>`;
-      }
-    };
+    if (isAuthenticated) {
+      const user = await auth0Client.getUser();
+      document.getElementById("user-info").textContent =
+        `👋 سلام ${user.name || user.email}`;
+    }
+  }
 
-    // دکمه Sign Up
-    document.addEventListener("DOMContentLoaded", () => {
-      document.getElementById("btn-sign-up").addEventListener("click", async () => {
-        await auth0.loginWithRedirect({
-          screen_hint: "signup",
-          redirect_uri: "https://nrgfront.github.io/Omnifood-project/"
-        });
+  window.onload = initAuth0;
+</script>
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const signupBtn = document.getElementById("btn-signup");
+
+    signupBtn.addEventListener("click", async () => {
+      await auth0Client.loginWithRedirect({
+        authorizationParams: {
+          screen_hint: "signup", // مستقیم می‌بره روی فرم ثبت‌نام
+          redirect_uri: window.location.origin,
+        },
       });
     });
-  </script>
+  });
+</script>
+
+
   </body>
 </html>
+
 
 
 
