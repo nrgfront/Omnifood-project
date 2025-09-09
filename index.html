@@ -50,6 +50,10 @@
           <li><a href="#" class="main-nav-link btn-active">Try for free</a></li>
         </ul>
       </nav>
+       <!-- feat: implement dark/light mode toggle button -->
+       <button id="btn-theme" class="btn">
+      <ion-icon name="sunny"></ion-icon>
+    </button>
       <!-- MOBILE -->
       <button class="btn-mobile-nav">
         <ion-icon name="menu" class="icon-mobile-nav"></ion-icon>
@@ -69,7 +73,7 @@
               eat healthy again. Tailored to your personal tastes and
               nutritional needs.
             </p>
-            <a href="" class="btn btn--fill margin-right-middle margin-buttom-s"
+            <a href="" class="btn btn--fill margin-right-middle margin-buttom-s btn-sign-up"
               >Start eating well</a
             >
             <a href="" class="btn btn--outline margin-right-middle"
@@ -618,9 +622,7 @@
       <ion-icon name="arrow-round-up"></ion-icon>
     </button>
 
-    <button id="btn-theme" class="btn">
-      <ion-icon name="sunny"></ion-icon>
-    </button>
+   
       <!-- Auth0 Library -->
   <script src="https://cdn.auth0.com/js/auth0-spa-js/1.22/auth0-spa-js.production.js"></script>
   <script>
@@ -654,7 +656,7 @@
 
     // دکمه Sign Up
     document.addEventListener("DOMContentLoaded", () => {
-      document.getElementById("btn-cta").addEventListener("click", async () => {
+      document.getElementById("btn-sign-up").addEventListener("click", async () => {
         await auth0.loginWithRedirect({
           screen_hint: "signup",
           redirect_uri: "https://nrgfront.github.io/Omnifood-project/"
@@ -664,6 +666,7 @@
   </script>
   </body>
 </html>
+
 
 
 
