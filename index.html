@@ -627,7 +627,7 @@
 
 <!-- Auth0 SDK -->
 <script src="https://cdn.auth0.com/js/auth0-spa-js/2.5.0/auth0-spa-js.production.js"></script>
-
+<script>
   let auth0Client;
 
   async function initAuth0() {
@@ -654,6 +654,7 @@
     const signupBtn = document.getElementById("btn-signup");
     if (signupBtn) {
       signupBtn.addEventListener("click", async () => {
+          e.preventDefault(); // جلوگیری از رفرش
         await auth0Client.loginWithRedirect({
           authorizationParams: {
             screen_hint: "signup",
@@ -671,6 +672,7 @@
 
   </body>
 </html>
+
 
 
 
