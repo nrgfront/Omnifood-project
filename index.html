@@ -631,58 +631,51 @@
 <!-- Auth0 SDK -->
 
 
-<script src="https://cdn.jsdelivr.net/npm/@auth0/auth0-spa-js@2.3.0/dist/auth0-spa-js.production.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@auth0/auth0-spa-js@2.3.0/dist/auth0-spa-js.production.js" defer></script>
 
 
-
-
-
-<script>
-let auth0Client;
-
-async function initAuth0() {
-  auth0Client = await createAuth0Client({
-    domain: "dev-27uradi1nhb46goz.us.auth0.com",
-    client_id: "RdVkDBf94wKPW7CM3Epb8t9FjD0bLx4G",
-  });
-
-  if (window.location.search.includes("code=") &&
-      window.location.search.includes("state=")) {
-    await auth0Client.handleRedirectCallback();
-    window.history.replaceState({}, document.title, window.location.pathname);
-  }
-
-  const isAuthenticated = await auth0Client.isAuthenticated();
-
-  if (isAuthenticated) {
-    const user = await auth0Client.getUser();
-    document.getElementById("user-info").textContent =
-      `👋 سلام ${user.name || user.email}`;
-  }
-
-  // وصل کردن دکمه SignUp
-  const signupBtn = document.getElementById("btn-signup");
-  if (signupBtn) {
-    signupBtn.addEventListener("click", async (e) => {
-      e.preventDefault();
-      await auth0Client.loginWithRedirect({
-        authorizationParams: {
-          screen_hint: "signup",
-          redirect_uri: "https://nrgfront.github.io/Omnifood-project/"
-        }
-      });
+  <!-- 📌 کد پروژه -->
+  <script>
+  document.addEventListener("DOMContentLoaded", async () => {
+    let auth0Client = await createAuth0Client({
+      domain: "dev-27uradi1nhb46goz.us.auth0.com",
+      client_id: "RdVkDBf94wKPW7CM3Epb8t9FjD0bLx4G",
     });
-  }
-}
 
-window.onload = initAuth0;
-</script>
+    if (window.location.search.includes("code=") &&
+        window.location.search.includes("state=")) {
+      await auth0Client.handleRedirectCallback();
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
 
+    const isAuthenticated = await auth0Client.isAuthenticated();
+
+    if (isAuthenticated) {
+      const user = await auth0Client.getUser();
+      document.getElementById("user-info").textContent =
+        `👋 سلام ${user.name || user.email}`;
+    }
+
+    const signupBtn = document.getElementById("btn-signup");
+    if (signupBtn) {
+      signupBtn.addEventListener("click", async (e) => {
+        e.preventDefault();
+        await auth0Client.loginWithRedirect({
+          authorizationParams: {
+            screen_hint: "signup",
+            redirect_uri: "https://nrgfront.github.io/Omnifood-project/"
+          }
+        });
+      });
+    }
+  });
+  </script>
 
 
 
   </body>
 </html>
+
 
 
 
