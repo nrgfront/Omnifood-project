@@ -635,9 +635,11 @@
 
 
   <!-- 📌 کد پروژه -->
-  <script>
-  document.addEventListener("DOMContentLoaded", async () => {
-    let auth0Client = await createAuth0Client({
+<script>
+  let auth0Client;
+
+  async function initAuth0() {
+    auth0Client = await createAuth0Client({
       domain: "dev-27uradi1nhb46goz.us.auth0.com",
       client_id: "RdVkDBf94wKPW7CM3Epb8t9FjD0bLx4G",
     });
@@ -668,13 +670,17 @@
         });
       });
     }
-  });
-  </script>
+  }
+
+  initAuth0();
+</script>
+
 
 
 
   </body>
 </html>
+
 
 
 
