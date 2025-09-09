@@ -625,22 +625,20 @@
       <ion-icon name="arrow-round-up"></ion-icon>
     </button>
 
-<!--     auth0 library -->
-   <script src="https://cdn.auth0.com/js/auth0-spa-js/2.5/auth0-spa-js.production.js"></script>
+<script src="https://cdn.auth0.com/js/auth0-spa-js/2.5/auth0-spa-js.production.js"></script>
 <script>
   let auth0Client;
 
   async function initAuth0() {
     auth0Client = await createAuth0Client({
-      domain: "dev-27uradi1nhb46goz.us.auth0.com",        // ← اینو از داشبورد Auth0 بگیر
-      client_id: "RdVkDBf94wKPW7CM3Epb8t9FjD0bLx4G",  // ← اینو هم از داشبورد Auth0 بگیر
+      domain: "dev-27uradi1nhb46goz.us.auth0.com",
+      client_id: "RdVkDBf94wKPW7CM3Epb8t9FjD0bLx4G",
     });
 
-    // وقتی کاربر از Auth0 برگشت، این کد ریدایرکت رو هندل می‌کنه
     if (window.location.search.includes("code=") &&
         window.location.search.includes("state=")) {
       await auth0Client.handleRedirectCallback();
-      window.history.replaceState({}, document.title, "/"); 
+      window.history.replaceState({}, document.title, window.location.pathname);
     }
 
     const isAuthenticated = await auth0Client.isAuthenticated();
@@ -650,28 +648,29 @@
       document.getElementById("user-info").textContent =
         `👋 سلام ${user.name || user.email}`;
     }
+
+    // ✅ حالا اینجا مطمئن می‌شیم بعد از آماده شدن auth0Client، دکمه وصل بشه
+    const signupBtn = document.getElementById("btn-signup");
+    if (signupBtn) {
+      signupBtn.addEventListener("click", async () => {
+        await auth0Client.loginWithRedirect({
+          authorizationParams: {
+            screen_hint: "signup",
+            redirect_uri: "https://nrgfront.github.io/Omnifood-project/"
+          }
+        });
+      });
+    }
   }
 
   window.onload = initAuth0;
 </script>
-    <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const signupBtn = document.getElementById("btn-signup");
 
-    signupBtn.addEventListener("click", async () => {
-      await auth0Client.loginWithRedirect({
-        authorizationParams: {
-          screen_hint: "signup", // مستقیم می‌بره روی فرم ثبت‌نام
-          redirect_uri: window.location.origin,
-        },
-      });
-    });
-  });
-</script>
 
 
   </body>
 </html>
+
 
 
 
