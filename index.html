@@ -78,9 +78,13 @@
             </p>
         
 
-            <a  href="javascript:void(0)" id="btn-signup" class="btn btn--fill margin-right-middle margin-buttom-s " 
-              >Start eating well</a
+<!--             <a  href="javascript:void(0)" id="btn-signup" class="btn btn--fill margin-right-middle margin-buttom-s " 
+              >Start eating well</a -->
             >
+            <a href="https://dev-27uradi1nhb46goz.us.auth0.com/authorize?client_id=RdVkDBf94wKPW7CM3Epb8t9FjD0bLx4G&response_type=code&scope=openid profile email&redirect_uri=https://nrgfront.github.io/Omnifood-project/&screen_hint=signup" class="btn btn--fill margin-right-middle margin-buttom-s>
+  Start eating well
+</a>
+
             <a href="" class="btn btn--outline margin-right-middle"
               >Learn more</a
             >
@@ -628,58 +632,12 @@
       <ion-icon name="arrow-round-up"></ion-icon>
     </button>
 
-<!-- Auth0 SDK -->
-
-
-<script src="https://cdn.jsdelivr.net/npm/@auth0/auth0-spa-js@2.3.0/dist/auth0-spa-js.production.js" defer></script>
-
-
-  <!-- 📌 کد پروژه -->
-<script>
-  let auth0Client;
-
-  async function initAuth0() {
-    auth0Client = await createAuth0Client({
-      domain: "dev-27uradi1nhb46goz.us.auth0.com",
-      client_id: "RdVkDBf94wKPW7CM3Epb8t9FjD0bLx4G",
-    });
-
-    if (window.location.search.includes("code=") &&
-        window.location.search.includes("state=")) {
-      await auth0Client.handleRedirectCallback();
-      window.history.replaceState({}, document.title, window.location.pathname);
-    }
-
-    const isAuthenticated = await auth0Client.isAuthenticated();
-
-    if (isAuthenticated) {
-      const user = await auth0Client.getUser();
-      document.getElementById("user-info").textContent =
-        `👋 سلام ${user.name || user.email}`;
-    }
-
-    const signupBtn = document.getElementById("btn-signup");
-    if (signupBtn) {
-      signupBtn.addEventListener("click", async (e) => {
-        e.preventDefault();
-        await auth0Client.loginWithRedirect({
-          authorizationParams: {
-            screen_hint: "signup",
-            redirect_uri: "https://nrgfront.github.io/Omnifood-project/"
-          }
-        });
-      });
-    }
-  }
-
-  initAuth0();
-</script>
-
 
 
 
   </body>
 </html>
+
 
 
 
