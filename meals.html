@@ -1,23 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-/* *************************** */
-/* footer-meals */
-/* *************************** */
-.grid-footer-meals {
-  display: grid;
-  grid-template-columns: 1fr;
-  row-gap: 1.6rem;
-  justify-content: center;
-}
-.logo-col-meals,.copyright,.footer-links{
-  justify-self: center;
-}
-.footer-link-box{
-  display: flex;
-  gap: 1.6rem;
-}
-.footer-link{
-  color: #888;
-  font-size: 1.4rem;
-    font-weight: 400;
-    transition: all 0.5s;
-}
+    <title>Omnifood &mdash; Never cook again!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="img/favicon-web.png" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+
+    <!-- ionicon -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"
+    ></script>
+
+    
+    <script defer src="js/script.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+  <a href="#">
+    <img src="img/omnifood-logo.png" alt="Omnifood logo" class="logo-omnifood"/>
+  </a>
+
+  <nav class="main-nav">
+    <ul class="main-nav-list">
+      <li><a href="#section-Vegetarian" class="main-nav-link">Vegetarian</a></li>
+      <li><a href="#section-Vegan" class="main-nav-link">Vegan</a></li>
+      <li><a href="#section-Keto" class="main-nav-link">Keto</a></li>
+      <li><a href="#section-Gluten-free" class="main-nav-link">Gluten-free</a></li>
+
+      <!-- Dropdown -->
+      <li class="dropdown">
+        <a href="#" class="main-nav-link">More ▾</a>
+        <ul class="submenu">
+          <li><a href="#section-Pescatarian">Pescatarian</a></li>
+          <li><a href="#section-Lactose-free">Lactose-free</a></li>
+          <li><a href="#section-Paleo">Paleo</a></li>
+          <li><a href="#section-LowFODMAP">Low FODMAP</a></li>
+          <li><a href="#section-Kid-friendly">Kid-friendly</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- MOBILE -->
+  <button class="btn-mobile-nav">
+    <ion-icon name="menu" class="icon-mobile-nav"></ion-icon>
+    <ion-icon name="close" class="icon-mobile-nav"></ion-icon>
+  </button>
+</header>
+
+    <section class="section-meals" data-aos="fade-up">
+      <div class="container center-text">
+        <p class="subheading">more meals</p>
+        <h2 class="heading-secondary">Our Healthy Meal Plans</h2>
+         <p class="moremeals-text">Welcome to our Healthy Meal Plans section!
+Here, you’ll find a variety of nutritious and delicious dishes tailored to different lifestyles and dietary needs. From Vegetarian, Vegan, and Pescatarian meals to Gluten-free, Lactose-free, Keto, Paleo, Low FODMAP, and Kid-friendly options — we’ve got you covered.
+
+Each meal card shows you the calories, Nutri-Score rating, and health grade so you can easily choose what’s best for your body and goals. Eating well has never been this simple, tasty, and accessible!</p>
+      </div>
+     
+      <div class="container">
+        <div id="section-Vegetarian" class="meal-title">
+          <!-- ////////////////////////////// -->
+          <!-- Vegetarian -->
+          <!-- ////////////////////////////////// -->
+          <h3 class="heading-tritiary">Vegetarian diet</h3>
+        </div>
+        <div class="meals">
+          <div class="meal">
+            <div class="meal-img-container">
+    <img src="img/moremeals/quinoa-salad.jpg" class="meal-img img-size" alt="quinoa-salad" />
+    <div class="meal-overlay">
+      A fresh salad made with quinoa, cucumbers, tomatoes, and herbs, packed with fiber and protein.
+    </div>
+  </div>
+            <div class="meal-content">
+              <div class="meal-tag">
+                <span class="tag tag--Vegetarian">Vegetarian</span>
+              </div>
+              <p class="meal-title">Quinoa Salad with Veggies</p>
+              <ul class="meal-attributes">
+                <li class="meal-attribute">
+                  <ion-icon name="flame" class="meal-icon"></ion-icon>
+                  <span><strong>350</strong> Calories</span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="restaurant" class="meal-icon"></ion-icon>
+                  <span>NutriScore &reg; <strong>85</strong></span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="star" class="meal-icon"></ion-icon>
+                  <span><strong>4.7</strong> rating (505)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="meal">
+             <div class="meal-img-container">
+    <img src="img/moremeals/caprese-salad.jpg" class="meal-img img-size" alt="caprese-salad" />
+    <div class="meal-overlay">
+      Classic Italian salad with fresh mozzarella, tomatoes, basil, and a drizzle of olive oil.
+    </div>
+  </div>
+            <div class="meal-content">
+              <div class="meal-tag">
+                <span class="tag tag--Vegetarian">Vegetarian</span>
+              </div>
+              <p class="meal-title">Caprese Salad</p>
+              <ul class="meal-attributes">
+                <li class="meal-attribute">
+                  <ion-icon name="flame" class="meal-icon"></ion-icon>
+                  <span><strong>300</strong> Calories</span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="restaurant" class="meal-icon"></ion-icon>
+                  <span>NutriScore &reg; <strong>88</strong></span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="star" class="meal-icon"></ion-icon>
+                  <span><strong>4.8</strong> rating (568)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="meal">
+            <div class="meal-img-container">
+    <img src="img/moremeals/bell-peppers.jpg" class="meal-img img-size" alt="bell-peppers" />
+    <div class="meal-overlay">
+      Bell peppers stuffed with seasoned rice, vegetables, and melted cheese.
+    </div>
+  </div>
+            <div class="meal-content">
+              <div class="meal-tag">
+                <span class="tag tag--Vegetarian">Vegetarian</span>
+              </div>
+              <p class="meal-title">Stuffed Bell Peppers with Rice & Cheese</p>
+              <ul class="meal-attributes">
+                <li class="meal-attribute">
+                  <ion-icon name="flame" class="meal-icon"></ion-icon>
+                  <span><strong>300</strong> Calories</span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="restaurant" class="meal-icon"></ion-icon>
+                  <span>NutriScore &reg; <strong>87</strong></span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="star" class="meal-icon"></ion-icon>
+                  <span><strong>4</strong> rating (568)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+ <!-- ////////////////////////////////// -->
+          <!-- Vegan -->
+          <!-- ////////////////////////////////// -->
+        <div id="section-Vegan" class="meal-title"><h3 class="heading-tritiary">Vegan</h3></div>
+        <div class="meals">
+          <div class="meal">
+            <div class="meal-img-container">
+    <img src="img/moremeals/lentil.jpg" class="meal-img img-size" alt="Lentil & Chickpea Stew" />
+    <div class="meal-overlay">
+      Hearty vegan stew made with lentils, chickpeas, and vegetables, high in plant-based protein.
+    </div>
+  </div>
+            <div class="meal-content">
+              <div class="meal-tag">
+                <span class="tag tag--Vegan">Vegan</span>
+              </div>
+              <p class="meal-title">Lentil & Chickpea Stew</p>
+              <ul class="meal-attributes">
+                <li class="meal-attribute">
+                  <ion-icon name="flame" class="meal-icon"></ion-icon>
+                  <span><strong>400</strong> Calories</span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="restaurant" class="meal-icon"></ion-icon>
+                  <span>NutriScore &reg; <strong>88</strong></span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="star" class="meal-icon"></ion-icon>
+                  <span><strong>4.8</strong> rating (652)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="meal">
+            <div class="meal-img-container">
+    <img src="img/moremeals/vegan-buddha.jpg" class="meal-img img-size" alt="Vegan Buddha Bowl" />
+    <div class="meal-overlay">
+      Colorful bowl of quinoa, roasted vegetables, avocado, and tahini dressing.
+    </div>
+  </div>
+            <div class="meal-content">
+              <div class="meal-tag">
+                <span class="tag tag--Vegan">Vegan</span>
+              </div>
+              <p class="meal-title">Vegan Buddha Bowl</p>
+              <ul class="meal-attributes">
+                <li class="meal-attribute">
+                  <ion-icon name="flame" class="meal-icon"></ion-icon>
+                  <span><strong>300</strong> Calories</span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="restaurant" class="meal-icon"></ion-icon>
+                  <span>NutriScore &reg; <strong>90</strong></span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="star" class="meal-icon"></ion-icon>
+                  <span><strong>4.7</strong> rating (498)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="meal">
+  <div class="meal-img-container">
+    <img src="img/moremeals/chickpea.jpg" class="meal-img img-size" alt="Chickpea & Spinach Curry with Brown Rice" />
+    <div class="meal-overlay">
+      Spiced curry with chickpeas and spinach, served over brown rice for a filling vegan meal.
+    </div>
+  </div>
+   
+            <div class="meal-content">
+              <div class="meal-tag">
+                <span class="tag tag--Vegan">Vegan</span>
+              </div>
+              <p class="meal-title">Chickpea & Spinach Curry with Brown Rice</p>
+              <ul class="meal-attributes">
+                <li class="meal-attribute">
+                  <ion-icon name="flame" class="meal-icon"></ion-icon>
+                  <span><strong>330</strong> Calories</span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="restaurant" class="meal-icon"></ion-icon>
+                  <span>NutriScore &reg; <strong>91</strong></span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="star" class="meal-icon"></ion-icon>
+                  <span><strong>4.1</strong> rating (624)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+           
+          </div>
+           <!-- ////////////////////////////////// -->
+          <!-- Pescatarian -->
+          <!-- ////////////////////////////////// -->
+
+          <div id="section-Pescatarian" class="meal-title">
+            <h3 class="heading-tritiary">Pescatarian</h3>
+        </div>
+        <div class="meals">
+          <div class="meal">
+             <div class="meal-img-container">
+    <img src="img/moremeals/grilled-salmon.jpg" class="meal-img img-size" alt="Grilled Salmon & Asparagus" />
+    <div class="meal-overlay">
+      Omega-3 rich salmon fillet served with grilled asparagus and lemon.
+    </div>
+  </div>
+            <div class="meal-content">
+              <div class="meal-tag">
+                <span class="tag tag--Pescatarian">Pescatarian</span>
+              </div>
+              <p class="meal-title">Grilled Salmon & Asparagus</p>
+              <ul class="meal-attributes">
+                <li class="meal-attribute">
+                  <ion-icon name="flame" class="meal-icon"></ion-icon>
+                  <span><strong>450</strong> Calories</span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="restaurant" class="meal-icon"></ion-icon>
+                  <span>NutriScore &reg; <strong>82</strong></span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="star" class="meal-icon"></ion-icon>
+                  <span><strong>4.9</strong> rating (624)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="meal">
+            <div class="meal-img-container">
+    <img src="img/moremeals/tuna-salad.jpg" class="meal-img img-size" alt="Tuna Salad with Lemon" />
+    <div class="meal-overlay">
+      Light and zesty tuna salad with fresh lemon juice and greens.
+    </div>
+  </div>
+            <div class="meal-content">
+              <div class="meal-tag">
+                <span class="tag tag--Pescatarian">Pescatarian</span>
+              </div>
+              <p class="meal-title">Tuna Salad with Lemon</p>
+              <ul class="meal-attributes">
+                <li class="meal-attribute">
+                  <ion-icon name="flame" class="meal-icon"></ion-icon>
+                  <span><strong>420</strong> Calories</span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="restaurant" class="meal-icon"></ion-icon>
+                  <span>NutriScore &reg; <strong>84</strong></span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="star" class="meal-icon"></ion-icon>
+                  <span><strong>4.8</strong> rating (534)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="meal">
+            <div class="meal-img-container">
+    <img src="img/moremeals/grilled-tuna-potato.jpg" class="meal-img img-size" alt="Grilled Tuna with Spinach & Sweet Potato" />
+    <div class="meal-overlay">
+      High-protein meal with grilled tuna, sautéed spinach, and roasted sweet potatoes.
+    </div>
+  </div>
+            <div class="meal-content">
+              <div class="meal-tag">
+                <span class="tag tag--Pescatarian">Pescatarian</span>
+              </div>
+              <p class="meal-title">Grilled Tuna with Spinach & Sweet Potato</p>
+              <ul class="meal-attributes">
+                <li class="meal-attribute">
+                  <ion-icon name="flame" class="meal-icon"></ion-icon>
+                  <span><strong>360</strong> Calories</span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="restaurant" class="meal-icon"></ion-icon>
+                  <span>NutriScore &reg; <strong>94</strong></span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="star" class="meal-icon"></ion-icon>
+                  <span><strong>5</strong> rating (563)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        
+        </div>
+              <!-- ////////////////////////////////// -->
+          <!-- Gluten-free -->
+          <!-- ////////////////////////////////// -->
+          <div id="section-Gluten-free" class="meal-title">
+            <h3 class="heading-tritiary">Gluten-free</h3>
+          </div>
+        <div class="meals">
+          <div class="meal">
+             <div class="meal-img-container">
+    <img src="img/moremeals/zucchini.jpg" class="meal-img img-size" alt="Zucchini Noodles with Pesto" />
+    <div class="meal-overlay">
+      Low-carb zucchini noodles tossed with basil pesto and cherry tomatoes.
+    </div>
+  </div>
+            <div class="meal-content">
+              <div class="meal-tag">
+                <span class="tag tag--Gluten-free">Gluten-free</span>
+              </div>
+              <p class="meal-title">Zucchini Noodles with Pesto</p>
+              <ul class="meal-attributes">
+                <li class="meal-attribute">
+                  <ion-icon name="flame" class="meal-icon"></ion-icon>
+                  <span><strong>320</strong> Calories</span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="restaurant" class="meal-icon"></ion-icon>
+                  <span>NutriScore &reg; <strong>80</strong></span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="star" class="meal-icon"></ion-icon>
+                  <span><strong>4.6</strong> rating (486)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="meal">
+            <div class="meal-img-container">
+    <img src="img/moremeals/veggie-pizza.jpg" class="meal-img img-size" alt="Gluten-Free Veggie Pizza" />
+    <div class="meal-overlay">
+      Pizza with a gluten-free crust, topped with seasonal vegetables and light cheese.
+    </div>
+  </div>
+            <div class="meal-content">
+              <div class="meal-tag">
+                <span class="tag tag--Gluten-free">Gluten-free</span>
+              </div>
+              <p class="meal-title">Gluten-Free Veggie Pizza</p>
+              <ul class="meal-attributes">
+                <li class="meal-attribute">
+                  <ion-icon name="flame" class="meal-icon"></ion-icon>
+                  <span><strong>380</strong> Calories</span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="restaurant" class="meal-icon"></ion-icon>
+                  <span>NutriScore &reg; <strong>82</strong></span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="star" class="meal-icon"></ion-icon>
+                  <span><strong>4.7</strong> rating (534)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="meal">
+           <div class="meal-img-container">
+    <img src="img/moremeals/quinoa-bowl.jpg" class="meal-img img-size" alt="Quinoa Bowl with Roasted Veggies & Feta" />
+    <div class="meal-overlay">
+      Nutritious quinoa topped with roasted vegetables and crumbled feta cheese.
+    </div>
+  </div>
+            <div class="meal-content">
+              <div class="meal-tag">
+                <span class="tag tag--Gluten-free">Gluten-free</span>
+              </div>
+              <p class="meal-title">Quinoa Bowl with Roasted Veggies & Feta</p>
+              <ul class="meal-attributes">
+                <li class="meal-attribute">
+                  <ion-icon name="flame" class="meal-icon"></ion-icon>
+                  <span><strong>310</strong> Calories</span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="restaurant" class="meal-icon"></ion-icon>
+                  <span>NutriScore &reg; <strong>89</strong></span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="star" class="meal-icon"></ion-icon>
+                  <span><strong>4.3</strong> rating (578)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+             
+        </div>
+         <!-- ////////////////////////////////// -->
+          <!-- Keto -->
+          <!-- ////////////////////////////////// -->
+         <div id="section-Keto" class="meal-title"> <h3 class="heading-tritiary">Keto</h3></div>
+        <div class="meals">
+          <div class="meal">
+             <div class="meal-img-container">
+    <img src="img/moremeals/Avocado.jpg" class="meal-img img-size" alt="Avocado & Bacon Salad" />
+    <div class="meal-overlay">
+      Creamy avocado paired with crispy bacon, lettuce, and light dressing.
+    </div>
+  </div>
+            <div class="meal-content">
+              <div class="meal-tag">
+                <span class="tag tag--Keto">Keto</span>
+              </div>
+              <p class="meal-title">Avocado & Bacon Salad</p>
+              <ul class="meal-attributes">
+                <li class="meal-attribute">
+                  <ion-icon name="flame" class="meal-icon"></ion-icon>
+                  <span><strong>500</strong> Calories</span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="restaurant" class="meal-icon"></ion-icon>
+                  <span>NutriScore &reg; <strong>78</strong></span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="star" class="meal-icon"></ion-icon>
+                  <span><strong>4.5</strong> rating (527)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="meal">
+            <div class="meal-img-container">
+    <img src="img/moremeals/keto-egg.jpg" class="meal-img img-size" alt="Keto Egg Bowl" />
+    <div class="meal-overlay">
+      Low-carb keto meal made with scrambled eggs, avocado, and sautéed greens.
+    </div>
+  </div>
+            <div class="meal-content">
+              <div class="meal-tag">
+                <span class="tag tag--Keto">Keto</span>
+              </div>
+              <p class="meal-title">Keto Egg Bowl</p>
+              <ul class="meal-attributes">
+                <li class="meal-attribute">
+                  <ion-icon name="flame" class="meal-icon"></ion-icon>
+                  <span><strong>480</strong> Calories</span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="restaurant" class="meal-icon"></ion-icon>
+                  <span>NutriScore &reg; <strong>77</strong></span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="star" class="meal-icon"></ion-icon>
+                  <span><strong>4.6</strong> rating (498)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="meal">
+           <div class="meal-img-container">
+    <img src="img/moremeals/zucchini-noodles.jpg" class="meal-img img-size" alt="Zucchini Noodles with Creamy Pesto & Chicken" />
+    <div class="meal-overlay">
+      Zoodles served with chicken breast in a creamy pesto sauce.
+    </div>
+  </div>
+            <div class="meal-content">
+              <div class="meal-tag">
+                <span class="tag tag--Keto">Keto</span>
+              </div>
+              <p class="meal-title">Zucchini Noodles with Creamy Pesto & Chicken</p>
+              <ul class="meal-attributes">
+                <li class="meal-attribute">
+                  <ion-icon name="flame" class="meal-icon"></ion-icon>
+                  <span><strong>340</strong> Calories</span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="restaurant" class="meal-icon"></ion-icon>
+                  <span>NutriScore &reg; <strong>92</strong></span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="star" class="meal-icon"></ion-icon>
+                  <span><strong>5</strong> rating (623)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+             <!-- ////////////////////////////////// -->
+          <!-- Lactose-free -->
+          <!-- ////////////////////////////////// -->
+          <div id="section-Lactose-free" class="meal-title"><h3 class="heading-tritiary">Lactose-free</h3></div>
+         <div class="meals">
+          <div class="meal">
+             <div class="meal-img-container">
+    <img src="img/moremeals/vegetable-soup.jpg" class="meal-img img-size" alt="Lentil & Vegetable Soup" />
+    <div class="meal-overlay">
+      Comforting soup with lentils, carrots, celery, and spices.
+    </div>
+  </div>
+            <div class="meal-content">
+              <div class="meal-tag">
+                <span class="tag tag--Lactose-free">Lactose-free</span>
+              </div>
+              <p class="meal-title">Lentil & Vegetable Soup</p>
+              <ul class="meal-attributes">
+                <li class="meal-attribute">
+                  <ion-icon name="flame" class="meal-icon"></ion-icon>
+                  <span><strong>250</strong> Calories</span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="restaurant" class="meal-icon"></ion-icon>
+                  <span>NutriScore &reg; <strong>90</strong></span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="star" class="meal-icon"></ion-icon>
+                  <span><strong>4</strong> rating (476)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="meal">
+            <div class="meal-img-container">
+    <img src="img/moremeals/grilled-chicken.jpg" class="meal-img img-size" alt="Grilled Chicken with Steamed Veggies" />
+    <div class="meal-overlay">
+      Lean grilled chicken breast with steamed broccoli, carrots, and beans.
+    </div>
+  </div>
+            <div class="meal-content">
+              <div class="meal-tag">
+                <span class="tag tag--Lactose-free">Lactose-free</span>
+              </div>
+              <p class="meal-title">Grilled Chicken with Steamed Veggies</p>
+              <ul class="meal-attributes">
+                <li class="meal-attribute">
+                  <ion-icon name="flame" class="meal-icon"></ion-icon>
+                  <span><strong>320</strong> Calories</span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="restaurant" class="meal-icon"></ion-icon>
+                  <span>NutriScore &reg; <strong>95</strong></span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="star" class="meal-icon"></ion-icon>
+                  <span><strong>5</strong> rating (612)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="meal">
+           <div class="meal-img-container">
+    <img src="img/moremeals/quinoasaladchickpeas.jpg" class="meal-img img-size" alt="Quinoa Salad with Chickpeas & Veggies" />
+    <div class="meal-overlay">
+      High-protein quinoa salad with chickpeas, cucumbers, and tomatoes.
+    </div>
+  </div>
+            <div class="meal-content">
+              <div class="meal-tag">
+                <span class="tag tag--Lactose-free">Vegan</span>
+              </div>
+              <p class="meal-title">Quinoa Salad with Chickpeas & Veggies</p>
+              <ul class="meal-attributes">
+                <li class="meal-attribute">
+                  <ion-icon name="flame" class="meal-icon"></ion-icon>
+                  <span><strong>280</strong> Calories</span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="restaurant" class="meal-icon"></ion-icon>
+                  <span>NutriScore &reg; <strong>88</strong></span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="star" class="meal-icon"></ion-icon>
+                  <span><strong>4</strong> rating (489)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+              <!-- ////////////////////////////////// -->
+          <!-- Paleo -->
+          <!-- ////////////////////////////////// -->
+          <div id="section-Paleo" class="meal-title"><h3 class="heading-tritiary">Paleo</h3></div>
+         <div class="meals">
+          <div class="meal">
+             <div class="meal-img-container">
+    <img src="img/moremeals/beef-steak.jpg" class="meal-img img-size" alt="Beef Steak with Broccoli & Mushrooms" />
+    <div class="meal-overlay">
+      Juicy beef steak served with sautéed broccoli and mushrooms.
+    </div>
+  </div>
+            <div class="meal-content">
+              <div class="meal-tag">
+                <span class="tag tag--Paleo">Paleo</span>
+              </div>
+              <p class="meal-title">Beef Steak with Broccoli & Mushrooms</p>
+              <ul class="meal-attributes">
+                <li class="meal-attribute">
+                  <ion-icon name="flame" class="meal-icon"></ion-icon>
+                  <span><strong>400</strong> Calories</span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="restaurant" class="meal-icon"></ion-icon>
+                  <span>NutriScore &reg; <strong>80</strong></span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="star" class="meal-icon"></ion-icon>
+                  <span><strong>4</strong> rating (463)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="meal">
+            <div class="meal-img-container">
+    <img src="img/moremeals/grilled-salmon-avocado.jpg" class="meal-img img-size" alt="Grilled Salmon with Avocado & Veggies" />
+    <div class="meal-overlay">
+      Grilled salmon fillet with creamy avocado and seasonal vegetables.
+  </div>
+   </div>
+            <div class="meal-content">
+              <div class="meal-tag">
+                <span class="tag tag--Paleo">Paleo</span>
+              </div>
+              <p class="meal-title">Grilled Salmon with Avocado & Veggies</p>
+              <ul class="meal-attributes">
+                <li class="meal-attribute">
+                  <ion-icon name="flame" class="meal-icon"></ion-icon>
+                  <span><strong>350</strong> Calories</span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="restaurant" class="meal-icon"></ion-icon>
+                  <span>NutriScore &reg; <strong>92</strong></span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="star" class="meal-icon"></ion-icon>
+                  <span><strong>5</strong> rating (642)</span>
+                </li>
+              </ul>
+            </div>
+         
+         
+        </div>
+         <div class="meal">
+            <div class="meal-img-container">
+    <img src="img/moremeals/roasted-turkey.jpg" class="meal-img img-size" alt="Roasted Turkey with Zucchini & Peppers" />
+    <div class="meal-overlay">
+      Oven-roasted turkey slices with roasted zucchini and bell peppers.
+    </div>
+  </div>
+            <div class="meal-content">
+              <div class="meal-tag">
+                <span class="tag tag--Paleo">Paleo</span>
+              </div>
+              <p class="meal-title">Roasted Turkey with Zucchini & Peppers</p>
+              <ul class="meal-attributes">
+                <li class="meal-attribute">
+                  <ion-icon name="flame" class="meal-icon"></ion-icon>
+                  <span><strong>330</strong> Calories</span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="restaurant" class="meal-icon"></ion-icon>
+                  <span>NutriScore &reg; <strong>85</strong></span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="star" class="meal-icon"></ion-icon>
+                  <span><strong>4</strong> rating (630)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+         </div>
+        
+                <!-- ////////////////////////////////// -->
+          <!-- Low-FODMAP -->
+          <!-- ////////////////////////////////// -->
+         <div id="section-Low-FODMAP" class="meal-title"> <h3 class="heading-tritiary">Low FODMAP</h3></div>
+         <div class="meals">
+          <div class="meal">
+             <div class="meal-img-container">
+    <img src="img/moremeals/grilled-white-fish.jpg" class="meal-img img-size" alt="Grilled White Fish with Basmati Rice" />
+    <div class="meal-overlay">
+     Light grilled fish fillet with fragrant basmati rice and herbs.
+    </div>
+  </div>
+            <div class="meal-content">
+              <div class="meal-tag">
+                <span class="tag tag--Low-FODMAP">Low FODMAP</span>
+              </div>
+              <p class="meal-title">Grilled White Fish with Basmati Rice</p>
+              <ul class="meal-attributes">
+                <li class="meal-attribute">
+                  <ion-icon name="flame" class="meal-icon"></ion-icon>
+                  <span><strong>310</strong> Calories</span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="restaurant" class="meal-icon"></ion-icon>
+                  <span>NutriScore &reg; <strong>90</strong></span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="star" class="meal-icon"></ion-icon>
+                  <span><strong>4.2</strong> rating (544)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="meal">
+            <div class="meal-img-container">
+    <img src="img/moremeals/baked-chicken.jpg" class="meal-img img-size" alt="Gluten-Free Baked Chicken with Zucchini" />
+    <div class="meal-overlay">
+     Tender chicken baked with zucchini, perfect for gluten-free diets.
+    </div>
+  </div>
+            <div class="meal-content">
+              <div class="meal-tag">
+                <span class="tag tag--Low-FODMAP">Low FODMAP</span>
+              </div>
+              <p class="meal-title">Gluten-Free Baked Chicken with Zucchini</p>
+              <ul class="meal-attributes">
+                <li class="meal-attribute">
+                  <ion-icon name="flame" class="meal-icon"></ion-icon>
+                  <span><strong>280</strong> Calories</span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="restaurant" class="meal-icon"></ion-icon>
+                  <span>NutriScore &reg; <strong>87</strong></span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="star" class="meal-icon"></ion-icon>
+                  <span><strong>4.5</strong> rating (513)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="meal">
+              <div class="meal-img-container">
+    <img src="img/moremeals/carrot-soup.jpg" class="meal-img img-size" alt="Carrot & Ginger Soup" />
+    <div class="meal-overlay">
+      Smooth and warming soup made with carrots, ginger, and light cream.
+    </div>
+  </div>
+            <div class="meal-content">
+              <div class="meal-tag">
+                <span class="tag tag--Low-FODMAP">Low FODMAP</span>
+              </div>
+              <p class="meal-title">Carrot & Ginger Soup</p>
+              <ul class="meal-attributes">
+                <li class="meal-attribute">
+                  <ion-icon name="flame" class="meal-icon"></ion-icon>
+                  <span><strong>200</strong> Calories</span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="restaurant" class="meal-icon"></ion-icon>
+                  <span>NutriScore &reg; <strong>92</strong></span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="star" class="meal-icon"></ion-icon>
+                  <span><strong>4.8</strong> rating (686)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+                <!-- ////////////////////////////////// -->
+          <!-- Kid-friendly -->
+          <!-- ////////////////////////////////// -->
+          <div id="section-Kid-friendly" class="meal-title"><h3 class="heading-tritiary">Kid-friendly</h3></div>
+         <div class="meals">
+          <div class="meal">
+            <div class="meal-img-container">
+    <img src="img/moremeals/whole-grain-pasta.jpg" class="meal-img img-size" alt="Whole-Grain Pasta with Tomato Sauce & Shredded Chicken" />
+    <div class="meal-overlay">
+      Healthy pasta with homemade tomato sauce and shredded chicken breast.
+    </div>
+  </div>
+            <div class="meal-content">
+              <div class="meal-tag">
+                <span class="tag tag--Kid-friendly">Kid-friendly</span>
+              </div>
+              <p class="meal-title">Whole-Grain Pasta with Tomato Sauce & Shredded Chicken</p>
+              <ul class="meal-attributes">
+                <li class="meal-attribute">
+                  <ion-icon name="flame" class="meal-icon"></ion-icon>
+                  <span><strong>350</strong> Calories</span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="restaurant" class="meal-icon"></ion-icon>
+                  <span>NutriScore &reg; <strong>85</strong></span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="star" class="meal-icon"></ion-icon>
+                  <span><strong>4.1</strong> rating (436)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="meal">
+             <div class="meal-img-container">
+    <img src="img/moremeals/mini-chicken-burger.jpg" class="meal-img img-size" alt="Mini Chicken Burger with Baked Potatoes" />
+    <div class="meal-overlay">
+      Small chicken patties served with oven-baked potato wedges.
+    </div>
+  </div>
+            <div class="meal-content">
+              <div class="meal-tag">
+                <span class="tag tag--Kid-friendly">Kid-friendly</span>
+              </div>
+              <p class="meal-title">Mini Chicken Burger with Baked Potatoes</p>
+              <ul class="meal-attributes">
+                <li class="meal-attribute">
+                  <ion-icon name="flame" class="meal-icon"></ion-icon>
+                  <span><strong>320</strong> Calories</span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="restaurant" class="meal-icon"></ion-icon>
+                  <span>NutriScore &reg; <strong>78</strong></span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="star" class="meal-icon"></ion-icon>
+                  <span><strong>4.1</strong> rating (489)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="meal">
+           <div class="meal-img-container">
+    <img src="img/moremeals/vegetable-soup-toast.jpg" class="meal-img img-size" alt="Vegetable Soup with Toast Bites" />
+    <div class="meal-overlay">
+      Light vegetable soup with crunchy toast cubes.
+    </div>
+  </div>
+            <div class="meal-content">
+              <div class="meal-tag">
+                <span class="tag tag--Kid-friendly">Kid-friendly</span>
+              </div>
+              <p class="meal-title">Vegetable Soup with Toast Bites</p>
+              <ul class="meal-attributes">
+                <li class="meal-attribute">
+                  <ion-icon name="flame" class="meal-icon"></ion-icon>
+                  <span><strong>220</strong> Calories</span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="restaurant" class="meal-icon"></ion-icon>
+                  <span>NutriScore &reg; <strong>93</strong></span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon name="star" class="meal-icon"></ion-icon>
+                  <span><strong>4.6</strong> rating (583)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        </div>
+      
+      </div>
+
+     
+    </section>
+    
+
+    <!-- /////////////////////////////////// -->
+<!-- footer-meals -->
+    <footer class="footer">
+      <div class="container grid-footer-meals">
+        <div class="logo-col-meals">
+          <a href="#"
+            ><img
+              src="img/omnifood-logo.png"
+              class="logo-omnifood"
+              alt=""
+          /></a>
+      </div>
+      <div class="copyright">
+         <p >
+            Copyright &copy; 2027 by Omnifood, Inc. All rights reserved.
+          </p>
+      </div>
+      <div class="footer-links">
+         <ul class="footer-link-box">
+      <li><a class="footer-link" href="index.html">Home</a></li>
+      <li><a class="footer-link" href="meals.html">Meals</a></li>
+      <li><a class="footer-link" href="index.html#section-pricing-id">Pricing</a></li>
+      <li><a class="footer-link" href="index.html#section-cta-id">Contact</a></li>
+    </ul>
+      </div>
+    </footer>
+  
+
+  </div>
+</footer>
+
+
+   
+  </body>
+</html>
