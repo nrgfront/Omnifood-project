@@ -139,5 +139,26 @@ btnTheme.addEventListener("click", () => {
 });
 
 
+///////////////////////////////////////////////////////////
+// MORE-MEALS-HEADER
+
+// Mobile menu toggle
+const btnNav = document.querySelector(".btn-mobile-nav");
+const header = document.querySelector(".header");
+
+btnNav.addEventListener("click", function () {
+  header.classList.toggle("nav-open");
+});
+
+// Dropdown toggle (for mobile)
+const dropdown = document.querySelector(".dropdown > a");
+const dropdownParent = dropdown.parentElement;
+
+dropdown.addEventListener("click", function (e) {
+  e.preventDefault();
+  dropdownParent.classList.toggle("open");
+});
+
+
 
 
