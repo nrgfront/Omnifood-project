@@ -138,6 +138,54 @@ btnTheme.addEventListener("click", () => {
   }
 });
 
+   ///////////////////////////////////////////////////////
+// botton-sign-up 
+
+document.getElementById("signup-btn").addEventListener("click", () => {
+  window.location.href = "https://dev-27uradi1nhb46goz.us.auth0.com/authorize?client_id=RdVkDBf94wKPW7CM3Epb8t9FjD0bLx4G&response_type=code&scope=openid%20profile%20email&redirect_uri=https://nrgfront.github.io/Omnifood-project/&screen_hint=signup";
+});
+
+
+////////////////////////////////////////////////////
+    //  JS Popup + Auth0 Redirect 
+   
+      const startBtn = document.getElementById("start-btn");
+      const popup = document.getElementById("popup-form");
+      const closeBtn = document.querySelector(".close-btn");
+      const formPopup = document.getElementById("form-popup");
+
+      // Open popup
+      startBtn.addEventListener("click", () => {
+        popup.style.display = "flex";
+      });
+
+      // Close popup with X
+      closeBtn.addEventListener("click", () => {
+        popup.style.display = "none";
+      });
+
+      // Close popup by clicking outside
+      popup.addEventListener("click", (e) => {
+        if (e.target === popup) popup.style.display = "none";
+      });
+
+
+// On form submit → redirect to meals.html
+formPopup.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const height = document.getElementById("height").value;
+  const weight = document.getElementById("weight").value;
+  const goal = document.getElementById("goal").value;
+
+  console.log({ height, weight, goal }); // 
+
+  //to meals.html
+  window.location.href = "meals.html";
+});
+
+
+
 
 ///////////////////////////////////////////////////////////
 // MORE-MEALS-HEADER
