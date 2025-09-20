@@ -116,9 +116,9 @@ form.addEventListener("submit", function (e) {
   e.preventDefault();
   const email = document.querySelector("#cta-email").value;
   if (!email.includes("@")) {
-    alert("❌ لطفاً ایمیل معتبر وارد کنید");
+    alert("❌Please enter a valid email.");
   } else {
-    alert("✅ سفارش شما ثبت شد!");
+    alert("✅Your order has been placed!");
   }
 });
 ///////////////////////////////////////////////////////////
