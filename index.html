@@ -44,13 +44,13 @@
       <a href="#">
         <img src="img/omnifood-logo.png" alt="" class="logo-omnifood"
       /></a>
-      <nav class="main-nav">
+       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a href="#" class="main-nav-link">How it work</a></li>
-          <li><a href="#" class="main-nav-link">Meals</a></li>
-          <li><a href="#" class="main-nav-link">Testimonials</a></li>
-          <li><a href="#" class="main-nav-link">Pricing</a></li>
-          <li><a href="#" class="main-nav-link btn-active">Try for free</a></li>
+          <li><a href="#section-how-it-works-id" class="main-nav-link">How it work</a></li>
+          <li><a href="#section-meals-id" class="main-nav-link">Meals</a></li>
+          <li><a href="#section-testimonials-id" class="main-nav-link">Testimonials</a></li>
+          <li><a href="#section-pricing-id" class="main-nav-link">Pricing</a></li>
+          <li><a href="#section-cta-id" class="main-nav-link btn-active">Try for free</a></li>
         </ul>
       </nav>
        <!-- feat: implement dark/light mode toggle button -->
@@ -78,9 +78,9 @@
             </p>
         
 
-<!--             <button id="signup-btn" class:"btn btn--fill margin-right-middle margin-buttom-s"><a href='#'>Start eating well</a></button>
-             -->
-<button  class="btn btn--fill margin-right-middle margin-buttom-s" >Start eating well</button>
+
+  <!-- popup-btn -->
+            <button id="start-btn" class="btn btn--fill margin-right-middle margin-buttom-s">Start eating well</button>
 
             <a href="" class="btn btn--outline margin-right-middle"
               >Learn more</a
@@ -110,7 +110,7 @@
         <p id="user-info"></p>
       </section>
             <!-- add fade-in scroll animation for sections -->
-      <section class="section-featured-in" data-aos="fade-up">
+      <section id="section-featured-in-id" class="section-featured-in" data-aos="fade-up">
         <div class="container">
           <h2 class="heading-featured-in">As featured in</h2>
           <div class="logos">
@@ -139,7 +139,7 @@
         </div>
       </section>
             <!-- add fade-in scroll animation for sections -->
-      <section class="section-how-it-works" data-aos="fade-up">
+      <section id="section-how-it-works-id" class="section-how-it-works" data-aos="fade-up">
         <div class="container">
           <p class="subheading">how it works</p>
           <h2 class="heading-secondary">
@@ -201,7 +201,7 @@
         </div>
       </section>
             <!-- add fade-in scroll animation for sections -->
-      <section class="section-meals" data-aos="fade-up">
+      <section id="section-meals-id" class="section-meals" data-aos="fade-up">
         <div class="container center-text">
           <p class="subheading">meals</p>
           <h2 class="heading-secondary">
@@ -307,7 +307,7 @@
       </section>
       <!-- add fade-in scroll animation for sections -->
 
-      <section class="section-testimonials" data-aos="fade-up">
+      <section id="section-testimonials-id" class="section-testimonials" data-aos="fade-up">
         <div class="testimonials-container">
           <p class="subheading">testimonials</p>
           <h2 class="heading-secondary">once you try it, you cant lose it</h2>
@@ -406,7 +406,8 @@
         </div>
       </section>
       <!-- add fade-in scroll animation for sections -->
-      <section class="section-pricing" data-aos="fade-up">
+      <!-- for-footer-meals id -->
+      <section id="section-pricing-id" class="section-pricing" data-aos="fade-up">
         <div class="container">
           <p class="subheading">pricing</p>
           <h2 class="heading-secondary">
@@ -514,7 +515,8 @@
         </div>
       </section>
             <!-- add fade-in scroll animation for sections -->
-      <section class="section-cta" data-aos="fade-up">
+      <!-- for-footer-meals id -->
+      <section id="section-cta-id" class="section-cta" data-aos="fade-up">
         <div class="container">
           <div class="cta">
             <div class="cta-text-box">
@@ -631,6 +633,14 @@
 
 
 <!-- botton-sign-up -->
+<!-- <script>
+document.getElementById("signup-btn").addEventListener("click", () => {
+  window.location.href = "https://dev-27uradi1nhb46goz.us.auth0.com/authorize?client_id=RdVkDBf94wKPW7CM3Epb8t9FjD0bLx4G&response_type=code&scope=openid%20profile%20email&redirect_uri=https://nrgfront.github.io/Omnifood-project/&screen_hint=signup";
+});
+</script> -->
+
+    <!-- /////////////////////////////////////// -->
+<!-- botton-sign-up -->
 <script>
 document.getElementById("signup-btn").addEventListener("click", () => {
   window.location.href = "https://dev-27uradi1nhb46goz.us.auth0.com/authorize?client_id=RdVkDBf94wKPW7CM3Epb8t9FjD0bLx4G&response_type=code&scope=openid%20profile%20email&redirect_uri=https://nrgfront.github.io/Omnifood-project/&screen_hint=signup";
@@ -640,6 +650,7 @@ document.getElementById("signup-btn").addEventListener("click", () => {
 
   </body>
 </html>
+
 
 
 
