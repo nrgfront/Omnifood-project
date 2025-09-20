@@ -632,24 +632,47 @@
     </button>
 
 
-<!-- botton-sign-up -->
-<!-- <script>
-document.getElementById("signup-btn").addEventListener("click", () => {
-  window.location.href = "https://dev-27uradi1nhb46goz.us.auth0.com/authorize?client_id=RdVkDBf94wKPW7CM3Epb8t9FjD0bLx4G&response_type=code&scope=openid%20profile%20email&redirect_uri=https://nrgfront.github.io/Omnifood-project/&screen_hint=signup";
-});
-</script> -->
 
-    <!-- /////////////////////////////////////// -->
-<!-- botton-sign-up -->
-<script>
-document.getElementById("signup-btn").addEventListener("click", () => {
-  window.location.href = "https://dev-27uradi1nhb46goz.us.auth0.com/authorize?client_id=RdVkDBf94wKPW7CM3Epb8t9FjD0bLx4G&response_type=code&scope=openid%20profile%20email&redirect_uri=https://nrgfront.github.io/Omnifood-project/&screen_hint=signup";
-});
-</script>
+<!-- ////////////////////////////////// -->
+    <!-- Popup Form -->
+    <div id="popup-form" class="popup-overlay">
+      <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <div class="popup-title">
+          <h2>Start Your Nutrition Journey</h2>
+          <ion-icon name="restaurant" class="popup-icon"></ion-icon>
+        </div>
+        <p>
+          Please fill in the information below to get your personalized meal
+          plan.
+        </p>
+        <form id="form-popup">
+          <label for="height">Height (cm)</label>
+          <input type="number" id="height" name="height" required />
+
+          <label for="weight">Weight (kg)</label>
+          <input type="number" id="weight" name="weight" required />
+
+          <label for="goal">Your Goal</label>
+          <select id="goal" name="goal" required>
+            <option value="">Select</option>
+            <option value="lose">Lose Weight</option>
+            <option value="gain">Gain Muscle / Weight</option>
+            <option value="maintain">Maintain Fitness</option>
+          </select>
+
+          <button type="submit" class="popup-btn">
+            Continue <ion-icon name="arrow-round-forward" class="continue-icon"></ion-icon>
+          </button>
+        </form>
+      </div>
+    </div>
+
 
 
   </body>
 </html>
+
 
 
 
