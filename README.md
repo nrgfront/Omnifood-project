@@ -32,9 +32,7 @@ Omnifood-project/
     └── moremeals/
 
 
-    🚀 Demo
-
-👉 View Live Demo
+👉 [View Live Demo](omnifood-project-blush.vercel.app)
 
 🛠️ Built With
 
